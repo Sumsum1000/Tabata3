@@ -218,6 +218,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:layout_constraintVertical_bias="0.636" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <android.support.constraint.Barrier
         android:id="@+id/barrier7"
         android:layout_width="wrap_content"
