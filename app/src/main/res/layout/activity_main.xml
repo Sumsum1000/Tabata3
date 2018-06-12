@@ -61,7 +61,7 @@
         app:layout_constraintVertical_bias="0.243" />
 
     <TextView
-        android:id="@+id/tv_rounds"
+        android:id="@+id/tv_rounds_timer"
         android:layout_width="48dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -78,7 +78,7 @@
 
 
     <TextView
-        android:id="@+id/tv_seconds"
+        android:id="@+id/tv_rest_timer"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -95,7 +95,7 @@
         app:layout_constraintVertical_bias="0.491" />
 
     <TextView
-        android:id="@+id/tv_work"
+        android:id="@+id/tv_work_timer"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -111,37 +111,37 @@
         app:layout_constraintTop_toTopOf="@+id/progress_bar_work" />
 
     <SeekBar
-        android:id="@+id/seekBar3"
+        android:id="@+id/seek_bar_work"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintBottom_toTopOf="@+id/seek_bar_rest"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/et_work"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.989" />
 
     <SeekBar
-        android:id="@+id/seekBar4"
+        android:id="@+id/seek_bar_rounds"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView8" />
+        app:layout_constraintStart_toEndOf="@+id/et_rounds" />
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/seek_bar_rest"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/seekBar4"
+        app:layout_constraintBottom_toTopOf="@+id/seek_bar_rounds"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView6" />
+        app:layout_constraintStart_toEndOf="@+id/et_rest" />
 
     <TextView
         android:id="@+id/textView9"
@@ -151,7 +151,7 @@
         android:text="Rounds"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/et_rounds"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -163,7 +163,7 @@
         android:text="Rest"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintEnd_toStartOf="@+id/et_rest"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -176,43 +176,44 @@
         android:text="Work"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/et_work"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.997" />
 
 
-    <TextView
-        android:id="@+id/textView4"
+    <EditText
+        android:id="@+id/et_work"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
         android:layout_marginTop="8dp"
-        android:text="10:00:00"
+        android:gravity="center"
+        android:text="70"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintEnd_toStartOf="@+id/seekBar3"
+        app:layout_constraintBottom_toTopOf="@+id/et_rest"
+        app:layout_constraintEnd_toStartOf="@+id/seek_bar_work"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.989" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/et_rest"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:gravity="center"
         android:text="20"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toStartOf="@+id/seekBar"
+        app:layout_constraintBottom_toTopOf="@+id/et_rounds"
+        app:layout_constraintEnd_toStartOf="@+id/seek_bar_rest"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView7" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/et_rounds"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -220,7 +221,7 @@
         android:text="999"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/seekBar4"
+        app:layout_constraintEnd_toStartOf="@+id/seek_bar_rounds"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView9" />
 
@@ -232,7 +233,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Button"
+        android:text="start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.821"
